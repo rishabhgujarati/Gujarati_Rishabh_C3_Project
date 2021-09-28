@@ -1,13 +1,14 @@
 package com.rishabh.entity;
 import com.rishabh.exception.itemNotFoundException;
 import com.rishabh.service.RestaurantService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.BDDMockito.given;
 
 class RestaurantTest {
     RestaurantService service = new RestaurantService();
@@ -80,4 +81,15 @@ class RestaurantTest {
 
     }*/
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>GetCost<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    @Test
+    public void select_item_from_list_should_return_order_cost(){
+        int totalCost;
+       List<Item> selectedItems = null;
+        totalCost = restaurant.getTotalCost(selectedItems) ;
+
+    }
+
+    //<<<<<<<<<<<<<<<<<<<<<<<GetCost>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
